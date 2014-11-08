@@ -1,0 +1,1 @@
+El alumno ha optado por codificar la Ñ como “n”, ya que la Ñ da problemas al decodificar.

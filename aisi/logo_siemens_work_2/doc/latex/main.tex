@@ -1,0 +1,39 @@
+\documentclass{report}
+\textheight=20cm
+\textwidth=18cm
+\topmargin=-3cm
+\oddsidemargin=-1cm
+\parindent=10mm
+
+\input paq.tex
+
+\begin{document}
+	%PORTADA
+	\setlength{\unitlength}{1 cm}
+	\thispagestyle{empty}
+	\begin{picture}(18,4)
+		\put(0,0){\includegraphics[width=5cm,height=3cm]{img/uco.jpg}}
+		\put(15,0){\includegraphics[width=3cm,height=3cm]{img/eps.png}}
+	\end{picture}
+	\\
+	\\
+	\begin{center}
+		\textbf{{\Huge Universidad de Córdoba}\\[0.5cm]
+		{\LARGE Escuela Politécnica Superior}}\\[1.25cm]
+		{\Large Aplicaciones Informáticas para Sistemas Industriales}\\[1cm]
+		{\LARGE \textbf{Problema AISI para acceso a la MH}}\\[1.5cm]
+		\begin{center}
+			\includegraphics[scale=0.5]{img/logo.jpg}\\[1cm]
+		\end{center}
+		{\large Raúl Pérula Martínez}\\[1cm]
+		1º Ingeniería Informática\\[1cm]
+		Córdoba - \today
+	\end{center}
+	
+	%INDICE GENERAL
+	\tableofcontents
+	
+	%CONTENIDO CAPITULOS
+	\input cap.tex
+	
+\end{document}

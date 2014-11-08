@@ -1,0 +1,10 @@
+Implementar las siguientes funciones en C++ partiendo de las utilizadas en la práctica segunda:
+
+	1.- Guardar un árbol binario de búsqueda (ABB) en un fichero.
+
+	2.- Recuperar un ABB de un fichero, respetando su estructura.
+
+	3.- Dados los valores identificativos de dos nodos de un ABB, encontrar y mostrar el camino mínimo que lo une.
+
+	4.- Dado un nodo por su campo informativo, mostrar todos los nodos que componen el camino más largo que comenzando en la raíz, pasa por ese nodo y termina en una hoja del árbol.
+

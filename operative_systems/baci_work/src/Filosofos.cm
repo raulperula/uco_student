@@ -1,0 +1,89 @@
+
+const int NFIL = 5;
+
+monitor Filosofos{
+	condition ListoParaComer[NFIL];
+	int Tenedor[NFIL], i;
+	
+	void CogerTenedor(int I)
+	{
+		cout << "Filosofo " << I << ": Pensando" << endl;
+		
+		/* Si el numero de tenedores es distinto de 2, espera */
+		if(Tenedor[I] != 2){
+			waitc(ListoParaComer[I]);
+		}
+		
+		/* Se decrementa el numero de tenedores de derecha e izquierda */
+		Tenedor[(I+1)%NFIL] = Tenedor[(I+1)%NFIL]-1;
+		if(I == 0){
+			Tenedor[(NFIL-1)%NFIL] = Tenedor[(NFIL-1)%NFIL]-1;
+		}
+		else{
+			Tenedor[(I-1)%NFIL] = Tenedor[(I-1)%NFIL]-1;
+		}
+	}
+
+	void Comer(int I)
+	{
+		int tenDer, tenIzq;
+		
+		cout << "Filosofo " << I << ": Comiendo" << endl;
+		
+		/* Se incrementa el numero de tenedores de derecha e izquierda */
+		tenDer = Tenedor[(I+1)%NFIL] = Tenedor[(I+1)%NFIL]+1;
+		if(I == 0){
+			tenIzq = Tenedor[(NFIL-1)%NFIL] = Tenedor[(NFIL-1)%NFIL]+1;
+		}
+		else{
+			tenIzq = Tenedor[(I-1)%NFIL] = Tenedor[(I-1)%NFIL]+1;
+		}
+		
+		/* Si el numero de tenedores del de la derecha es igual a 2, se encuentra
+			 listo para comer */
+		if(tenDer == 2){
+			signalc(ListoParaComer[(I+1)%NFIL]);
+		}
+		/* Si el numero de tenedores del de la izquierda es igual a 2, se encuentra
+			 listo para comer */
+		if(tenIzq == 2){
+			if(I == 0){
+				signalc(ListoParaComer[(NFIL-1)%NFIL]);
+			}
+			else{
+				signalc(ListoParaComer[(I-1)%NFIL]);
+			}
+		}
+	}
+	
+	/* Inicializacion de todos los tenedores a 2 */
+	init
+	{
+		for(i=0;i<NFIL;i++){
+			Tenedor[i] = 2;
+		}
+	}
+}
+
+void Filosofo(int I)
+{
+	int i;
+	
+	for(i=0;i<NFIL;i++){
+		CogerTenedor(I);
+		Comer(I);
+	}
+}
+
+int
+main()
+{
+	int i;
+	
+	cobegin{
+		for(i=0;i<NFIL;i++){
+			Filosofo(i);
+		}
+	}
+}
+

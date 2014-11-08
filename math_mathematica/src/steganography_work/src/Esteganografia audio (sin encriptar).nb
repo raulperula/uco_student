@@ -1,0 +1,340 @@
+(************** Content-type: application/mathematica **************
+                     CreatedBy='Mathematica 5.2'
+
+                    Mathematica-Compatible Notebook
+
+This notebook can be used with any Mathematica-compatible
+application, such as Mathematica, MathReader or Publicon. The data
+for the notebook starts with the line containing stars above.
+
+To get the notebook into a Mathematica-compatible application, do
+one of the following:
+
+* Save the data starting with the line of stars above into a file
+  with a name ending in .nb, then open the file inside the
+  application;
+
+* Copy the data starting with the line of stars above to the
+  clipboard, then use the Paste menu command inside the application.
+
+Data for notebooks contains only printable 7-bit ASCII and can be
+sent directly in email or through ftp in text mode.  Newlines can be
+CR, LF or CRLF (Unix, Macintosh or MS-DOS style).
+
+NOTE: If you modify the data for this notebook not in a Mathematica-
+compatible application, you must delete the line below containing
+the word CacheID, otherwise Mathematica-compatible applications may
+try to use invalid cache data.
+
+For more information on notebooks and Mathematica-compatible 
+applications, contact Wolfram Research:
+  web: http://www.wolfram.com
+  email: info@wolfram.com
+  phone: +1-217-398-0700 (U.S.)
+
+Notebook reader applications are available free of charge from 
+Wolfram Research.
+*******************************************************************)
+
+(*CacheID: 232*)
+
+
+(*NotebookFileLineBreakTest
+NotebookFileLineBreakTest*)
+(*NotebookOptionsPosition[      7253,        229]*)
+(*NotebookOutlinePosition[      7967,        254]*)
+(*  CellTagsIndexPosition[      7923,        250]*)
+(*WindowFrame->Normal*)
+
+
+
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Carga de librer\[IAcute]a", "Subsubtitle",
+  InitializationCell->True],
+
+Cell[BoxData[{
+    \(Clear["\<Global`*\>"]\), "\[IndentingNewLine]", 
+    \(Needs["\<Miscellaneous`Audio`\>"]\)}], "Input",
+  InitializationCell->True]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Posicionamiento en el directorio", "Subsubtitle",
+  InitializationCell->True],
+
+Cell[BoxData[{
+    \(\(\(Directory[]\)\(\[IndentingNewLine]\)
+    \) (*\ 
+      Deber\[AAcute]\ poner\ el\ directorio\ donde\ se\ encuentra\ el\ \
+fichero\ de\ sonido\ original\ *) \), "\[IndentingNewLine]", 
+    \(SetDirectory["\<C:\Documents and Settings\Korso\Mis \
+documentos\Universidad\Tercero\MM\>"]\), "\[IndentingNewLine]", 
+    \(FileNames[]\)}], "Input",
+  InitializationCell->True]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Funcion auxiliar", "Subsubtitle",
+  InitializationCell->True],
+
+Cell[BoxData[
+    \(RandomRelist[x_List] := 
+      Block[{n = x, p}, 
+        Do[p = Random[Integer, {1, i}]; 
+          n[\([{p, i}]\)] = n[\([{i, p}]\)], {i, Length[x]}]; n]\)], "Input",
+  InitializationCell->True]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Codificaci\[OAcute]n", "Subsubtitle"],
+
+Cell[CellGroupData[{
+
+Cell["Lectura del fichero de audio", "Subsection"],
+
+Cell[BoxData[{
+    \(\(audio = 
+        InputString["\<Escriba el nombre del fichero de audio:\>"];\)\), "\
+\[IndentingNewLine]", 
+    \(\(snd = ReadSoundfile[audio, PrintHeader \[Rule] True];\)\)}], "Input"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Reproducci\[OAcute]n del fichero de audio", "Subsection"],
+
+Cell[BoxData[
+    \(\(ListPlay[snd, SampleRate \[Rule] 44100, SampleDepth \[Rule] 16, \ 
+        PlayRange \[Rule] {\(-2^15\), 2^15}];\)\)], "Input"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Gr\[AAcute]fica del fichero de audio", "Subsection"],
+
+Cell[BoxData[
+    \(\(ListPlot[snd[\([1]\)], 
+        PlotRange \[Rule] {\(-2^15\), 2^15}];\)\)], "Input"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Mensaje Original", "Subsection"],
+
+Cell[BoxData[
+    \(\(mensaje = 
+        Characters["\<En un lugar de la Mancha, de cuyo nombre no quiero \
+acordarme, no ha mucho tiempo que viv\[IAcute]a un hidalgo de los de lanza en \
+astillero, adarga antigua, roc\[IAcute]n flaco y galgo corredor. Una olla de \
+algo m\[AAcute]s vaca que carnero, salpic\[OAcute]n las m\[AAcute]s noches, \
+duelos y quebrantos los s\[AAcute]bados, lentejas los viernes, alg\[UAcute]n \
+palomino de a\[NTilde]adidura los domingos, consum\[IAcute]an las tres partes \
+de su hacienda.\>"];\)\)], "Input"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Encriptaci\[OAcute]n del mensaje", "Subsection"],
+
+Cell[BoxData[
+    \(\(\(\[IndentingNewLine]\)\(\(mensaje = 
+        Flatten[AppendTo[
+            mensaje, {"\<@\>", "\<@\>", "\<@\>"}]];\)\[IndentingNewLine]
+    \(textoBinario = 
+        Flatten[IntegerDigits[ToCharacterCode[mensaje], 2, 
+            8]];\)\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(For[i = 1, 
+      i \[LessEqual] 
+        Length[textoBinario], \(i++\), \[IndentingNewLine]If[\((textoBinario[\
+\([i]\)] \[Equal] 0)\) && \((Mod[snd[\([1, i]\)], 2] \[Equal] 
+              1)\), \[IndentingNewLine]\(snd[\([1, 
+              i]\)]++\), \[IndentingNewLine]If[\((textoBinario[\([i]\)] \
+\[Equal] 1)\) && \((Mod[snd[\([1, i]\)], 2] \[Equal] 
+                0)\), \[IndentingNewLine]\(snd[\([1, 
+                i]\)]++\)\[IndentingNewLine]]\[IndentingNewLine]]\
+\[IndentingNewLine]]\)], "Input"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Guardado del nuevo fichero de audio encriptado", "Subsection"],
+
+Cell[BoxData[{
+    \(\(pru = 
+        ListPlay[snd, SampleRate \[Rule] 44100, \ SampleDepth \[Rule] 16, 
+          PlayRange \[Rule] {\(-2^15\), 2^15}];\)\), "\[IndentingNewLine]", 
+    \(\(nombreSonido = 
+        InputString["\<Nombre del fichero de sonido encriptado:\>"];\)\), "\
+\[IndentingNewLine]", 
+    \(\(Export[Directory[] <> "\<\\\>" <> nombreSonido, pru];\)\)}], "Input"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Decodificaci\[OAcute]n", "Subsubtitle"],
+
+Cell[CellGroupData[{
+
+Cell["Lectura del fichero de audio", "Subsection"],
+
+Cell[BoxData[{
+    \(\(audio = 
+        InputString["\<Escriba el nombre del fichero de audio con el mensaje:\
+\>"];\)\), "\[IndentingNewLine]", 
+    \(\(sndCod = 
+        ReadSoundfile[audio, PrintHeader \[Rule] True];\)\)}], "Input"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Decodificaci\[OAcute]n", "Subsection"],
+
+Cell[BoxData[{
+    \(\(cont\  = \ 1;\)\), "\[IndentingNewLine]", 
+    \(\(encontrado = 0;\)\), "\[IndentingNewLine]", 
+    \(\(menDec = {};\)\), "\[IndentingNewLine]", 
+    \(While[
+      encontrado \[NotEqual] 
+        1, \[IndentingNewLine]aux = {}; \[IndentingNewLine]For[i = 1, 
+          i \[LessEqual] 8, \(i++\), \[IndentingNewLine]AppendTo[aux, 
+            Mod[sndCod[\([1, cont]\)], 
+              2]]; \[IndentingNewLine]\(cont++\);\[IndentingNewLine]]\
+\[IndentingNewLine]AppendTo[menDec, 
+          FromCharacterCode[FromDigits[aux, 2]]]\[IndentingNewLine]If[
+          Length[menDec] \[GreaterEqual] 3, \[IndentingNewLine]If[
+            StringJoin[
+                Take[menDec, \(-3\)]] == "\<@@@\>", \
+\[IndentingNewLine]\(encontrado = 
+                1;\)\[IndentingNewLine]]\[IndentingNewLine]]\
+\[IndentingNewLine]]\), "\[IndentingNewLine]", 
+    \(menDec\)}], "Input"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Muestra del mensaje original", "Subsection"],
+
+Cell[BoxData[
+    \(StringJoin[Take[menDec, Length[menDec] - 3]]\)], "Input"]
+}, Open  ]]
+}, Open  ]]
+},
+FrontEndVersion->"5.2 for Microsoft Windows",
+ScreenRectangle->{{0, 1280}, {0, 717}},
+AutoGeneratedPackage->None,
+CellGrouping->Manual,
+WindowSize->{1112, 680},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+Magnification->1.5
+]
+
+(*******************************************************************
+Cached data follows.  If you edit this Notebook file directly, not
+using Mathematica, you must remove the line containing CacheID at
+the top of  the file.  The cache data will then be recreated when
+you save this file from within Mathematica.
+*******************************************************************)
+
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+
+(*NotebookFileOutline
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[1776, 53, 76, 1, 44, "Subsubtitle",
+  InitializationCell->True],
+Cell[1855, 56, 151, 3, 68, "Input",
+  InitializationCell->True]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[2043, 64, 83, 1, 44, "Subsubtitle",
+  InitializationCell->True],
+Cell[2129, 67, 393, 8, 146, "Input",
+  InitializationCell->True]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[2559, 80, 67, 1, 44, "Subsubtitle",
+  InitializationCell->True],
+Cell[2629, 83, 216, 5, 94, "Input",
+  InitializationCell->True]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[2882, 93, 43, 0, 44, "Subsubtitle"],
+
+Cell[CellGroupData[{
+Cell[2950, 97, 50, 0, 56, "Subsection"],
+Cell[3003, 99, 208, 4, 68, "Input"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[3248, 108, 63, 0, 56, "Subsection"],
+Cell[3314, 110, 149, 2, 42, "Input"]
+}, Closed]],
+
+Cell[CellGroupData[{
+Cell[3500, 117, 58, 0, 42, "Subsection"],
+Cell[3561, 119, 106, 2, 42, "Input"]
+}, Closed]],
+
+Cell[CellGroupData[{
+Cell[3704, 126, 38, 0, 42, "Subsection"],
+Cell[3745, 128, 539, 8, 198, "Input"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[4321, 141, 54, 0, 56, "Subsection"],
+Cell[4378, 143, 276, 6, 94, "Input"],
+Cell[4657, 151, 530, 10, 224, "Input"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[5224, 166, 68, 0, 56, "Subsection"],
+Cell[5295, 168, 383, 7, 94, "Input"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[5727, 181, 45, 0, 44, "Subsubtitle"],
+
+Cell[CellGroupData[{
+Cell[5797, 185, 50, 0, 56, "Subsection"],
+Cell[5850, 187, 235, 5, 68, "Input"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[6122, 197, 44, 0, 56, "Subsection"],
+Cell[6169, 199, 889, 18, 458, "Input"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[7095, 222, 50, 0, 56, "Subsection"],
+Cell[7148, 224, 77, 1, 42, "Input"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+
+
+(*******************************************************************
+End of Mathematica Notebook file.
+*******************************************************************)
+

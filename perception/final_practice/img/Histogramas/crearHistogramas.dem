@@ -1,0 +1,74 @@
+
+#gnuplot crearHistogramas.dem
+
+plot "cafeH.hist" with boxes
+set xlabel "Nivel de gris"
+set ylabel "Frecuencias"
+set xrange [0:256]
+set term png
+set output "Hcafe.png"
+replot
+
+plot "kidH.hist" with boxes
+set xlabel "Nivel de gris"
+set ylabel "Frecuencias"
+set xrange [0:256]
+set term png
+set output "Hkid.png"
+replot
+
+plot "lenaH.hist" with boxes
+set xlabel "Nivel de gris"
+set ylabel "Frecuencias"
+set xrange [0:256]
+set term png
+set output "Hlena.png"
+replot
+
+plot "leopardH.hist" with boxes
+set xlabel "Nivel de gris"
+set ylabel "Frecuencias"
+set xrange [0:256]
+set term png
+set output "Hleopard.png"
+replot
+
+plot "milkaH.hist" with boxes
+set xlabel "Nivel de gris"
+set ylabel "Frecuencias"
+set xrange [0:256]
+set term png
+set output "Hmilka.png"
+replot
+
+plot "photoH.hist" with boxes
+set xlabel "Nivel de gris"
+set ylabel "Frecuencias"
+set xrange [0:256]
+set term png
+set output "Hphoto.png"
+replot
+
+plot "toolsH.hist" with boxes
+set xlabel "Nivel de gris"
+set ylabel "Frecuencias"
+set xrange [0:256]
+set term png
+set output "Htools.png"
+replot
+
+plot "towerH.hist" with boxes
+set xlabel "Nivel de gris"
+set ylabel "Frecuencias"
+set xrange [0:256]
+set term png
+set output "Htower.png"
+replot
+
+plot "wH.hist" with boxes
+set xlabel "Nivel de gris"
+set ylabel "Frecuencias"
+set xrange [0:256]
+set term png
+set output "Hw.png"
+replot

@@ -1,0 +1,84 @@
+Mensaje codificado = RNRPTLYTT
+Caracteres = 9
+
+Clave k = 0
+Mensaje = RNRPTLYTT
+
+Clave k = 1
+Mensaje = QMQOSKXSS
+
+Clave k = 2
+Mensaje = PLPÑRJWRR
+
+Clave k = 3
+Mensaje = OKONQIVQQ
+
+Clave k = 4
+Mensaje = ÑJÑMPHUPP
+
+Clave k = 5
+Mensaje = NINLOGTOO
+
+Clave k = 6
+Mensaje = MHMKÑFSÑÑ
+
+Clave k = 7
+Mensaje = LGLJNERNN
+
+Clave k = 8
+Mensaje = KFKIMDQMM
+
+Clave k = 9
+Mensaje = JEJHLCPLL
+
+Clave k = 10
+Mensaje = IDIGKBOKK
+
+Clave k = 11
+Mensaje = HCHFJAÑJJ
+
+Clave k = 12
+Mensaje = GBGEIZNII
+
+Clave k = 13
+Mensaje = FAFDHYMHH
+
+Clave k = 14
+Mensaje = EZECGXLGG
+
+Clave k = 15
+Mensaje = DYDBFWKFF
+
+Clave k = 16
+Mensaje = CXCAEVJEE
+
+Clave k = 17
+Mensaje = BWBZDUIDD
+
+Clave k = 18
+Mensaje = AVAYCTHCC
+
+Clave k = 19
+Mensaje = ZUZXBSGBB
+
+Clave k = 20
+Mensaje = YTYWARFAA
+
+Clave k = 21
+Mensaje = XSXVZQEZZ
+
+Clave k = 22
+Mensaje = WRWUYPDYY
+
+Clave k = 23
+Mensaje = VQVTXOCXX
+
+Clave k = 24
+Mensaje = UPUSWÑBWW
+
+Clave k = 25
+Mensaje = TOTRVNAVV
+
+Clave k = 26
+Mensaje = SÑSQUMZUU
+

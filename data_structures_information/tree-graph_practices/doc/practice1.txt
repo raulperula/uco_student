@@ -1,0 +1,7 @@
+Implementar en C++ las siguientes operaciones:
+
+	- Mostrar un menu para elegir el tipo de árbol a crear(cualquier tipo básico).
+	- Añadir nodos mientras no se indique acabar.
+	- Mostrar el árbol creado usando el recorrido elegido (preorden, inorden o postorden).
+	- Mostrar en inorden el subárbol que parte de un nodo dado su valor, si no existe indicarlo.
+

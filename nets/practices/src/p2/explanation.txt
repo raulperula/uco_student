@@ -1,0 +1,39 @@
+struct hostent *hostinfo; //esta en #include <netdb.h>
+
+hostinfo = gethostbyname("gongora.uco.es");
+
+hostinfo->h_addr
+
+--------------------
+cat etc/host.conf
+cat etc/hosts
+cat etc/reserv.conf
+-----------------
+
+struct severnt *serv;
+
+serv = getservbyname("finger","tcp");
+serv->s_port
+
+----------------
+cat etc/services
+-------------
+
+//se utilizan en el servidor
+listen();
+accept();
+
+//en el cliente
+connect();
+
+//Funciones envio --- recepcion
+send(); --- recv();
+
+write(); --- read();
+
+FD_ISSET(0, &readbjs);
+
+-----------------------------------------------------------------------------
+Servidor:
+
+

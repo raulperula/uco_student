@@ -1,0 +1,25 @@
+#gnuplot crearHistogramas.dem
+
+plot "leopardo.hist" with boxes
+set xlabel "Nivel de gris"
+set ylabel "Frecuencias"
+set xrange [0:255]
+set term png
+set output "histLeo.png"
+replot
+
+plot "mandril.hist" with boxes
+set xlabel "Nivel de gris"
+set ylabel "Frecuencias"
+set xrange [0:255]
+set term png
+set output "histMan.png"
+replot
+
+plot "new2.hist" with boxes
+set xlabel "Nivel de gris"
+set ylabel "Frecuencias"
+set xrange [0:255]
+set term png
+set output "histNLEO.png"
+replot

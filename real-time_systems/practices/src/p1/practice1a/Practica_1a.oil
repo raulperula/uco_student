@@ -1,0 +1,47 @@
+#include "implementation.oil"
+
+CPU ATMEL_AT91SAM7S256 // CPU del Lego NXT
+{
+	OS LEJOS_OSEK
+  	{
+    	STATUS = EXTENDED;
+    	STARTUPHOOK = FALSE;
+    	ERRORHOOK = FALSE;
+    	SHUTDOWNHOOK = FALSE;
+    	PRETASKHOOK = FALSE;
+    	POSTTASKHOOK = FALSE;
+    	USEGETSERVICEID = FALSE;
+    	USEPARAMETERACCESS = FALSE;
+    	USERESSCHEDULER = FALSE;
+  	};
+
+	APPMODE sample_appmode1{}; // Modo de aplicacion por defecto.
+
+//##############################################################################
+
+	TASK Avance
+	{
+    	AUTOSTART = TRUE
+		{
+    		APPMODE = sample_appmode1;
+    	}; // Autoinicio en modo de aplicacion descrito
+		// Si no se desea que se autoarranque: AUTOSTART = FALSE;
+
+    	PRIORITY 	= 1; //Tarea de menor prioridad
+    	ACTIVATION 	= 1;
+    	SCHEDULE 	= FULL;
+    	STACKSIZE 	= 512;
+  	};
+   
+   TASK Final
+   {
+    	AUTOSTART = TRUE
+		{
+    		APPMODE = sample_appmode1;
+    	};
+        PRIORITY 	= 2;
+        ACTIVATION 	= 1;
+        SCHEDULE 	= FULL;
+        STACKSIZE 	= 512;
+   };   
+};

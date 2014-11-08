@@ -1,0 +1,14 @@
+Implementar las siguientes funciones en C++:
+
+	- Borrar un nodo dado su valor, de manera que el árbol resultante siga siendo un ABB:
+		# Para borrar un nodo de un árbol binario de búsqueda (ABB), de manera que el árbol resultante siga siendo un ABB. Podemos hacer lo siguiente:
+			- Si el nodo es hoja se elimina sin más, es decir, se pone a NULL el puntero correspondiente de su padre.
+			- Si no es hoja:
+				+ Ver cual de los subárboles que parten de el tiene mas nodos.
+					* si es el izquierdo, elegir el nodo con mayor valor.
+					* si es el derecho, elegir el nodo con menor valor.
+				+ Sustituir el valor del nodo eliminado por el valor tomado.
+				+ Eliminar el nodo elegido.
+
+	- Indicar si un nodo es completo (será completo si él y sus descendientes lo son).
+

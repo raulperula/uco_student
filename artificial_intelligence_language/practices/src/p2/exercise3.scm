@@ -1,0 +1,10 @@
+(define (tipo-de-orden? a b c)
+  (cond
+    ((<= a b c) 1)
+    ((<= b c a) 2)
+    ((<= c a b) 3)
+    ((<= a c b) 4)
+    ((<= c b a) 5)
+    ((<= b a c) 6)
+    )
+  )

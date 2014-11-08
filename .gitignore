@@ -1,3 +1,8 @@
+## Generic files to ignore
+*~
+*.lock
+*.DS_Store
+
 # Object files
 *.o
 *.ko
@@ -21,9 +26,41 @@
 *.dylib
 
 # Executables
-*.exe
+#*.exe
 *.out
 *.app
 *.i*86
 *.x86_64
 *.hex
+
+# java specific
+*target*
+*.jar
+*.war
+*.ear
+*.class
+
+# python specific
+*.pyc
+
+# eclipse specific git ignore
+*.pydevproject
+.project
+.metadata
+bin/**
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch

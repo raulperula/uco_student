@@ -1,0 +1,83 @@
+%CAPÍTULOS, SECCIONES Y SUBSECCIONES
+
+\chapter{Problema de LOGO!}
+	
+\section{Enunciado}
+La barrera de acceso a un garaje se abre accionada por un motor eléctrico con dos sentidos de giro, controlados por dos contactores KM1 (apertura) {\bf [Q1]} y KM2 (cierre) {\bf [Q2]}. Existen dos finales de carrera SQ3 {\bf[I3]} y SQ4 {\bf [I4]} para detectar si la barrera está abajo o arriba, respectivamente. Del mismo modo existe un pulsador S1 {\bf [I1]} para ordenar la apertura de la barrera y una fotocélula FC2 {\bf [I2]} que permite detectar el paso de vehículos o personas bajo la barrera.\\[2pt]
+
+Se pide realizar el programa de LOGO! que controle la subida y bajada de la barrera del garaje mediante el pulsador S1, de modo que al pulsar S1, la barrera debe subir hasta arriba del todo, esperar arriba 10 segundos y, posteriormente bajar. Si mientras la barrera está bajando se activa la fotocélula FC2, la barrera subirá y volverá a esperar 10 segundos arriba, tras lo cual bajará.\\
+Se debe tener en cuenta que si la barrera tarda más de 15 segundos en subir o bajar es por alguna anomalía y  se deberá detener el movimiento correspondiente, mostrando en la pantalla de LOGO! el mensaje de aviso: "Revisar motor".\\
+
+Además, existe una lámpara de señalización L3 {\bf [Q3]} de color rojo que debe estar encendida mientras la barrera esté abajo, otra lámpara de señalización L4 {\bf [Q4]} de color verde que debe estar encendida cuando la barrera esté arriba, para indicar que puede pasar el vehículo, y otra lámpara de señalización L5 {\bf [Q5]}, de color ámbar, que estará intermitente (1 segundo encendida, 1 segundo apagada) mientras la barrera esté subiendo o bajando.
+\pagebreak
+
+\section{Solución al problema}
+La solución a este problema planteado es muy sencilla si se piensa bien. Lo primero que se debe de hacer es plantearse el problema de manera modular.\\
+
+La primera idea contendrá la solución a la parte del funcionamiento de la barrera, controlando los motores, el tiempo que debe esperar y el funcionamiento de la fotocélula.\\
+
+La segunda idea contendrá la solución a la parte que controla las luces, haciendo uso de los finales de carrera de la barrera se podrá controlar la luz roja y la verde. A partir de que el motor esté en funcionamiento, ya sea subiendo o bajando, se encenderá la luz ámbar.\\
+
+Por último, la última idea tratará de dar solución a la activación del mensaje de advertencia cuando exista el fallo de motor.\\
+
+Vamos a ver con más detalle estos apartados. Primero se podrá una especie de pseudocódigo y después una explicación más detallada.
+
+\subsection{Activación del motor}
+{\bf Pseudocódigo}
+\begin{verbatim}
+	Si (S1 activo) entonces
+	  paso1: (KM1 activo) hasta que (SQ4 activo)
+	  Esperar 10 seg.
+	  Mientras (FC2 no activo) y (SQ3 no activo)
+	    KM2 activo
+	    Si (FC2 activo) entonces
+	      ir a paso1
+\end{verbatim}
+
+{\bf Descripción}\\
+
+Como se puede sobrentender por el pseudocódigo, si se activa el pulsador S1 se pondrá en marcha el motor 1 hasta que el final de carrera superior detecte que ha llegado. Posteriormente esperará 10 segundos y transcurrido este tiempo se pondrá en marcha el motor 2 bajando la barrera hasta que el final de carrera inferior o la fotocélula se activen. En el caso de que se active la fotocélula se tendrá que volver a accionar el primer motor e iniciar el proceso.\\
+
+Para esto, si se observa en el diagrama que se encuentra al final del documento se puede observar que se ha hecho uso de puertas AND, OR y NOT junto con un Retardo a la conexión con una configuración de 10 seg. y algunos Relés autoenclavadores. Todos estos componentes hacen un circuito muy sencillo para ejecutar lo antes explicado.
+
+\subsection{Activación de las luces}
+{\bf Pseudocódigo}
+\begin{verbatim}
+	Si (SQ3 activo) entonces
+	  L3 activo
+	Si (SQ4 activo) entonces
+	  L4 activo
+	Si (KM1 activo) o (KM2 activo) entonces
+	  Repetir en intervalos de 1 seg.
+	    L3 activo
+\end{verbatim}
+
+{\bf Descripción}\\
+
+En este caso, el funcionamiento de las luces no tiene mucha complicación. En el momento que el final de carrera de abajo esté activado se encenderá la luz roja. Cuando el final de carrera de arriba esté activado se encenderá la luz verde. Y por último, que puede ser un poco más complicado ya que tiene que hacerse uso de una repetición con un intervalo de tiempo, cuando uno de los motores esté activo, ya sea el primero o el segundo, se encenderá la luz ámbar durante un segundo y se mantendrá apagada durante otro segundo hasta que deje de funcionar el motor.\\
+
+Para la resolución de este apartado se ha hecho uso de la puerta  OR y del Generador de impulsos asíncronos con una configuración de 1 seg. la longitud de impulso y 1 seg. la longitud de pausa.
+
+\subsection{Activación del mensaje de advertencia}
+{\bf Pseudocódigo}
+\begin{verbatim}
+	Si ((KM1 activo) y (T > 15 seg.)) o ((KM2 activo) y (T > 15 seg.)) entonces
+	  Mostrar mensaje advertencia: "Revisar motor"
+\end{verbatim}
+
+{\bf Descripción}\\
+
+Ya estamos terminando, nos queda hacer que se muestre el mensaje de advertencia cuando uno de los motores esté activo y haya pasado más de 15 segundos con el mismo en marcha.\\
+
+Para ello, se ha hecho uso de puertas AND, OR y NOT, Relés autoenclavadores, un Retardo a la conexión con una configuración de 15 seg y un Texto de aviso para mostrar por pantalla el texto "Revisar motor".\\
+
+%PAGINA CON LA IMAGEN DE LA SOLUCION
+\begin{landscape}
+	\subsection{Gráfico resultante}
+	\begin{changemargin}{-2.2cm}{-3cm}
+		\thispagestyle{empty}
+		\begin{turn}{270}
+			\includegraphics[scale=0.8]{img/AISI.pdf}
+		\end{turn}
+	\end{changemargin}
+\end{landscape}

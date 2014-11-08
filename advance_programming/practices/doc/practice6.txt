@@ -1,0 +1,33 @@
+Introducción.
+
+Las expresiones regulares son una forma moderna y estandarizada de hacer búsquedas, reemplazos y análisis de texto usando patrones complejos de caracteres. La sintaxis es muy similar en todos los lenguajes que usan expresiones regulares.
+
+Para documentarse acerca de lo que son expresiones regulares podemos acceder a:
+
+    * Wikipedia
+    * Tutorial BULMA
+    * Regular Expression HOWTO
+
+Y para ver su uso en Python:
+
+    * Documentación en python.org
+    * Tutorial Inmersión en Python
+
+
+Práctica.
+
+1. Leer el capítulo correspondiente a las expresiones regulares del tutorial de 
+inmersión en python y comprobar los ejemplos correspondientes a los números 
+romanos y números de teléfono.
+
+2. Script que pida al usuario un nombre de archivo e imprima por pantalla todos 
+los números que estén en dicho archivo.
+
+3. Script que acepte como argumento un nombre de archivo e imprima por pantalla 
+todas las fechas que estén en dicho archivo. El año tiene 4 dígitos. Ejemplos de
+posibles fechas:
+
+1/1/2004
+02-05-2006
+3-12/2008
+

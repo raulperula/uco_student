@@ -1,0 +1,11 @@
+Texto plano: 
+asd 
+
+Clave k = 3 
+
+Numero de caracteres: 3 
+
+Mensaje codificado: 
+YÑP 
+
+Longitud: 3

@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<java version="1.4.1" class="java.beans.XMLDecoder"> 
+ <string>i62pemar</string> 
+ <string>Mon May 18 16:18:58 CEST 2009</string> 
+ <string></string> 
+ <object class="java.util.Vector"> 
+  <void method="add"> 
+   <string>Pc3 (192.168.1.4)</string> 
+  </void> 
+  <void method="add"> 
+   <string>Pc8 (192.168.2.4)</string> 
+  </void> 
+  <void method="add"> 
+   <string>1000</string> 
+  </void> 
+  <void method="add"> 
+   <string>1</string> 
+  </void> 
+  <void method="add"> 
+   <boolean>false</boolean> 
+  </void> 
+ </object> 
+ <class>objetoVisual.pcVisual</class> 
+ <string>Pc1</string> 
+ <string>1114</string> 
+ <string>172</string> 
+ <string>40</string> 
+ <string>40</string> 
+ <object class="objetoVisual.listaConexiones"> 
+  <void method="add"> 
+   <string>Ethernet1</string> 
+  </void> 
+ </object> 
+ <object class="java.util.Vector"> 
+  <void method="add"> 
+   <string>eth0</string> 
+  </void> 
+  <void method="add"> 
+   <string>192.168.1.2</string> 
+  </void> 
+  <void method="add"> 
+   <string>255.255.255.0</string> 
+  </void> 
+  <void method="add"> 
+   <string>00:00:00:00:00:01</string> 
+  </void> 
+  <void method="add"> 
+   <string>Ethernet1</string> 
+  </void> 
+ </object> 
+ <object class="java.util.Vector"> 
+  <void method="add"> 
+   <string>192.168.1.0</string> 
+  </void> 
+  <void method="add"> 
+   <string>255.255.255.0</string> 
+  </void> 
+  <void method="add"> 
+   <string>0.0.0.0</string> 
+  </void> 
+  <void method="add"> 
+   <string>eth0</string> 
+  </void> 
+  <void method="add"> 
+   <string>0.0.0.0</string> 
+  </void> 
+  <void method="add"> 
+   <string>255.255.255.255</string> 
+  </void> 
+  <void method="add"> 
+   <string>192.168.1.1</string> 
+  </void> 
+  <void method="add"> 
+   <string>eth0</string> 
+  </void> 
+ </object> 
+ <class>objetoVisual.pcVisual</class> 
+ <string>Pc2</string> 
+ <string>1019</string> 
+ <string>170</string> 
+ <string>40</string> 
+ <string>40</string> 
+ <object class="objetoVisual.listaConexiones"> 
+  <void method="add"> 
+   <string>Ethernet1</string> 
+  </void> 
+ </object> 
+ <object class="java.util.Vector"> 
+  <void method="add"> 
+   <string>eth0</string> 
+  </void> 
+  <void method="add"> 
+   <string>192.168.1.3</string> 
+  </void> 
+  <void method="add"> 
+   <string>255.255.255.0</string> 
+  </void> 
+  <void method="add"> 
+   <string>00:00:00:00:00:02</string> 
+  </void> 
+  <void method="add"> 
+   <string>Ethernet1</string> 
+  </void> 
+ </object> 
+ <object class="java.util.Vector"> 
+  <void method="add"> 
+   <string>192.168.1.0</string> 
+  </void> 
+  <void method="add"> 
+   <string>255.255.255.0</string> 
+  </void> 
+  <void method="add"> 
+   <string>0.0.0.0</string> 
+  </void> 
+  <void method="add"> 
+   <string>eth0</string> 
+  </void> 
+  <void method="add"> 
+   <string>0.0.0.0</string> 
+  </void> 
+  <void method="add"> 
+   <string>255.255.255.255</string> 
+  </void> 
+  <void method="add"> 
+   <string>192.168.1.1</string> 
+  </void> 
+  <void method="add"> 
+   <string>eth0</string> 
+  </void> 
+ </object> 
+ <class>objetoVisual.pcVisual</class> 
+ <string>Pc3</string> 
+ <string>932</string> 
+ <string>180</string> 
+ <string>40</string> 
+ <string>40</string> 
+ <object class="objetoVisual.listaConexiones"> 
+  <void method="add"> 
+   <string>Ethernet1</string> 
+  </void> 
+ </object> 
+ <object class="java.util.Vector"> 
+  <void method="add"> 
+   <string>eth0</string> 
+  </void> 
+  <void method="add"> 
+   <string>192.168.1.4</string> 
+  </void> 
+  <void method="add"> 
+   <string>255.255.255.0</string> 
+  </void> 
+  <void method="add"> 
+   <string>00:00:00:00:00:03</string> 
+  </void> 
+  <void method="add"> 
+   <string>Ethernet1</string> 
+  </void> 
+ </object> 
+ <object class="java.util.Vector"> 
+  <void method="add"> 
+   <string>192.168.1.0</string> 
+  </void> 
+  <void method="add"> 
+   <string>255.255.255.0</string> 
+  </void> 
+  <void method="add"> 
+   <string>0.0.0.0</string> 
+  </void> 
+  <void method="add"> 
+   <string>eth0</string> 
+  </void> 
+  <void method="add"> 
+   <string>0.0.0.0</string> 
+  </void> 
+  <void method="add"> 
+   <string>255.255.255.255</string> 
+  </void> 
+  <void method="add"> 
+   <string>192.168.1.1</string> 
+  </void> 
+  <void method="add"> 
+   <string>eth0</string> 
+  </void> 
+ </object> 
+ <class>objetoVisual.pcVisual</class> 
+ <string>Pc4</string> 
+ <string>491</string> 
+ <string>167</string> 
+ <string>40</string> 
+ <string>40</string> 
+ <object class="objetoVisual.listaConexiones"> 
+  <void method="add"> 
+   <string>Ethernet2</string> 
+  </void> 
+ </object> 
+ <object class="java.util.Vector"> 
+  <void method="add"> 
+   <string>eth0</string> 
+  </void> 
+  <void method="add"> 
+   <string>192.168.3.2</string> 
+  </void> 
+  <void method="add"> 
+   <string>255.255.255.0</string> 
+  </void> 
+  <void method="add"> 
+   <string>00:00:00:00:00:04</string> 
+  </void> 
+  <void method="add"> 
+   <string>Ethernet2</string> 
+  </void> 
+ </object> 
+ <object class="java.util.Vector"> 
+  <void method="add"> 
+   <string>192.168.2.0</string> 
+  </void> 
+  <void method="add"> 
+   <string>255.255.255.0</string> 
+  </void> 
+  <void method="add"> 
+   <string>0.0.0.0</string> 
+  </void> 
+  <void method="add"> 
+   <string>eth0</string> 
+  </void> 
+ </object> 
+ <class>objetoVisual.pcVisual</class> 
+ <string>Pc5</string> 
+ <string>396</string> 
+ <string>171</string> 
+ <string>40</string> 
+ <string>40</string> 
+ <object class="objetoVisual.listaConexiones"> 
+  <void method="add"> 
+   <string>Ethernet2</string> 
+  </void> 
+ </object> 
+ <object class="java.util.Vector"> 
+  <void method="add"> 
+   <string>eth0</string> 
+  </void> 
+  <void method="add"> 
+   <string>192.168.3.3</string> 
+  </void> 
+  <void method="add"> 
+   <string>255.255.255.0</string> 
+  </void> 
+  <void method="add"> 
+   <string>00:00:00:00:00:05</string> 
+  </void> 
+  <void method="add"> 
+   <string>Ethernet2</string> 
+  </void> 
+ </object> 
+ <object class="java.util.Vector"> 
+  <void method="add"> 
+   <string>192.168.3.0</string> 
+  </void> 
+  <void method="add"> 
+   <string>255.255.255.0</string> 
+  </void> 
+  <void method="add"> 
+   <string>0.0.0.0</string> 
+  </void> 
+  <void method="add"> 
+   <string>eth0</string> 
+  </void> 
+ </object> 
+ <class>objetoVisual.pcVisual</class> 
+ <string>Pc6</string> 
+ <string>557</string> 
+ <string>546</string> 
+ <string>40</string> 
+ <string>40</string> 
+ <object class="objetoVisual.listaConexiones"> 
+  <void method="add"> 
+   <string>Ethernet3</string> 
+  </void> 
+ </object> 
+ <object class="java.util.Vector"> 
+  <void method="add"> 
+   <string>eth0</string> 
+  </void> 
+  <void method="add"> 
+   <string>192.168.2.2</string> 
+  </void> 
+  <void method="add"> 
+   <string>255.255.255.0</string> 
+  </void> 
+  <void method="add"> 
+   <string>00:00:00:00:00:06</string> 
+  </void> 
+  <void method="add"> 
+   <string>Ethernet3</string> 
+  </void> 
+ </object> 
+ <object class="java.util.Vector"> 
+  <void method="add"> 
+   <string>192.168.2.0</string> 
+  </void> 
+  <void method="add"> 
+   <string>255.255.255.0</string> 
+  </void> 
+  <void method="add"> 
+   <string>0.0.0.0</string> 
+  </void> 
+  <void method="add"> 
+   <string>eth0</string> 
+  </void> 
+ </object> 
+ <class>objetoVisual.pcVisual</class> 
+ <string>Pc7</string> 
+ <string>644</string> 
+ <string>545</string> 
+ <string>40</string> 
+ <string>40</string> 
+ <object class="objetoVisual.listaConexiones"> 
+  <void method="add"> 
+   <string>Ethernet3</string> 
+  </void> 
+ </object> 
+ <object class="java.util.Vector"> 
+  <void method="add"> 
+   <string>eth0</string> 
+  </void> 
+  <void method="add"> 
+   <string>192.168.2.3</string> 
+  </void> 
+  <void method="add"> 
+   <string>255.255.255.0</string> 
+  </void> 
+  <void method="add"> 
+   <string>00:00:00:00:00:07</string> 
+  </void> 
+  <void method="add"> 
+   <string>Ethernet3</string> 
+  </void> 
+ </object> 
+ <object class="java.util.Vector"> 
+  <void method="add"> 
+   <string>192.168.2.0</string> 
+  </void> 
+  <void method="add"> 
+   <string>255.255.255.0</string> 
+  </void> 
+  <void method="add"> 
+   <string>0.0.0.0</string> 
+  </void> 
+  <void method="add"> 
+   <string>eth0</string> 
+  </void> 
+ </object> 
+ <class>objetoVisual.pcVisual</class> 
+ <string>Pc8</string> 
+ <string>745</string> 
+ <string>543</string> 
+ <string>40</string> 
+ <string>40</string> 
+ <object class="objetoVisual.listaConexiones"> 
+  <void method="add"> 
+   <string>Ethernet3</string> 
+  </void> 
+ </object> 
+ <object class="java.util.Vector"> 
+  <void method="add"> 
+   <string>eth0</string> 
+  </void> 
+  <void method="add"> 
+   <string>192.168.2.4</string> 
+  </void> 
+  <void method="add"> 
+   <string>255.255.255.0</string> 
+  </void> 
+  <void method="add"> 
+   <string>00:00:00:00:00:08</string> 
+  </void> 
+  <void method="add"> 
+   <string>Ethernet3</string> 
+  </void> 
+ </object> 
+ <object class="java.util.Vector"> 
+  <void method="add"> 
+   <string>192.168.2.0</string> 
+  </void> 
+  <void method="add"> 
+   <string>255.255.255.0</string> 
+  </void> 
+  <void method="add"> 
+   <string>0.0.0.0</string> 
+  </void> 
+  <void method="add"> 
+   <string>eth0</string> 
+  </void> 
+ </object> 
+ <class>objetoVisual.ethernetVisual</class> 
+ <string>Ethernet1</string> 
+ <string>930</string> 
+ <string>288</string> 
+ <string>230</string> 
+ <string>5</string> 
+ <object class="objetoVisual.listaConexiones"> 
+  <void method="add"> 
+   <string>Router1</string> 
+  </void> 
+  <void method="add"> 
+   <string>Pc3</string> 
+  </void> 
+  <void method="add"> 
+   <string>Pc2</string> 
+  </void> 
+  <void method="add"> 
+   <string>Pc1</string> 
+  </void> 
+ </object> 
+ <object class="java.util.Vector"/> 
+ <object class="java.util.Vector"/> 
+ <class>objetoVisual.ethernetVisual</class> 
+ <string>Ethernet2</string> 
+ <string>354</string> 
+ <string>287</string> 
+ <string>210</string> 
+ <string>5</string> 
+ <object class="objetoVisual.listaConexiones"> 
+  <void method="add"> 
+   <string>Pc5</string> 
+  </void> 
+  <void method="add"> 
+   <string>Pc4</string> 
+  </void> 
+  <void method="add"> 
+   <string>Router1</string> 
+  </void> 
+ </object> 
+ <object class="java.util.Vector"/> 
+ <object class="java.util.Vector"/> 
+ <class>objetoVisual.ethernetVisual</class> 
+ <string>Ethernet3</string> 
+ <string>546</string> 
+ <string>466</string> 
+ <string>231</string> 
+ <string>5</string> 
+ <object class="objetoVisual.listaConexiones"> 
+  <void method="add"> 
+   <string>Router1</string> 
+  </void> 
+  <void method="add"> 
+   <string>Pc6</string> 
+  </void> 
+  <void method="add"> 
+   <string>Pc7</string> 
+  </void> 
+  <void method="add"> 
+   <string>Pc8</string> 
+  </void> 
+ </object> 
+ <object class="java.util.Vector"/> 
+ <object class="java.util.Vector"/> 
+ <class>objetoVisual.routerVisual</class> 
+ <string>Router1</string> 
+ <string>665</string> 
+ <string>353</string> 
+ <string>40</string> 
+ <string>40</string> 
+ <object class="objetoVisual.listaConexiones"> 
+  <void method="add"> 
+   <string>Ethernet2</string> 
+  </void> 
+  <void method="add"> 
+   <string>Ethernet1</string> 
+  </void> 
+  <void method="add"> 
+   <string>Ethernet3</string> 
+  </void> 
+ </object> 
+ <object class="java.util.Vector"> 
+  <void method="add"> 
+   <string>eth0</string> 
+  </void> 
+  <void method="add"> 
+   <string>192.168.1.1</string> 
+  </void> 
+  <void method="add"> 
+   <string>255.255.255.0</string> 
+  </void> 
+  <void method="add"> 
+   <string>00:00:00:00:00:09</string> 
+  </void> 
+  <void method="add"> 
+   <string>Ethernet1</string> 
+  </void> 
+  <void method="add"> 
+   <string>eth1</string> 
+  </void> 
+  <void method="add"> 
+   <string>192.168.3.1</string> 
+  </void> 
+  <void method="add"> 
+   <string>255.255.255.0</string> 
+  </void> 
+  <void method="add"> 
+   <string>00:00:00:00:00:0A</string> 
+  </void> 
+  <void method="add"> 
+   <string>Ethernet2</string> 
+  </void> 
+  <void method="add"> 
+   <string>eth2</string> 
+  </void> 
+  <void method="add"> 
+   <string>192.168.2.1</string> 
+  </void> 
+  <void method="add"> 
+   <string>255.255.255.0</string> 
+  </void> 
+  <void method="add"> 
+   <string>00:00:00:00:00:0B</string> 
+  </void> 
+  <void method="add"> 
+   <string>Ethernet3</string> 
+  </void> 
+ </object> 
+ <object class="java.util.Vector"> 
+  <void method="add"> 
+   <string>192.168.1.0</string> 
+  </void> 
+  <void method="add"> 
+   <string>255.255.255.0</string> 
+  </void> 
+  <void method="add"> 
+   <string>0.0.0.0</string> 
+  </void> 
+  <void method="add"> 
+   <string>eth0</string> 
+  </void> 
+  <void method="add"> 
+   <string>192.168.3.0</string> 
+  </void> 
+  <void method="add"> 
+   <string>255.255.255.0</string> 
+  </void> 
+  <void method="add"> 
+   <string>0.0.0.0</string> 
+  </void> 
+  <void method="add"> 
+   <string>eth1</string> 
+  </void> 
+  <void method="add"> 
+   <string>192.168.2.0</string> 
+  </void> 
+  <void method="add"> 
+   <string>255.255.255.0</string> 
+  </void> 
+  <void method="add"> 
+   <string>0.0.0.0</string> 
+  </void> 
+  <void method="add"> 
+   <string>eth2</string> 
+  </void> 
+ </object> 
+ <class>objetoVisual.etiquetaVisual</class> 
+ <string>192.168.3.X</string> 
+ <string>335</string> 
+ <string>302</string> 
+ <string>70</string> 
+ <string>13</string> 
+ <object class="objetoVisual.listaConexiones"/> 
+ <object class="java.util.Vector"/> 
+ <object class="java.util.Vector"/> 
+ <class>objetoVisual.etiquetaVisual</class> 
+ <string>192.168.1.X</string> 
+ <string>1085</string> 
+ <string>311</string> 
+ <string>70</string> 
+ <string>13</string> 
+ <object class="objetoVisual.listaConexiones"/> 
+ <object class="java.util.Vector"/> 
+ <object class="java.util.Vector"/> 
+ <class>objetoVisual.etiquetaVisual</class> 
+ <string>192.168.2.X</string> 
+ <string>541</string> 
+ <string>448</string> 
+ <string>70</string> 
+ <string>13</string> 
+ <object class="objetoVisual.listaConexiones"/> 
+ <object class="java.util.Vector"/> 
+ <object class="java.util.Vector"/> 
+</java> 

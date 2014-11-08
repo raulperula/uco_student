@@ -1,0 +1,27 @@
+Funciones:
+
+- transforman fechas y horas binarias en ASCII
+
+	+ ctime();
+	char *ctime(const time_t *timep);
+
+	+ localtime();
+	struct tm *localtime(const time_t *timep);
+
+- strftime(); formatea fecha y hora
+	size_t strftime(char *s, size_t max, const char *format, const struct tm *tm);
+
+Ej.:
+strftime(cadena, 100, "formato", info);
+formatos: 
+	- %T: hora
+	- %d: dia
+	- %d %T: dia y hora
+
+
+Explicacion:
+
+struct tm *info;
+time_t timelocal;
+time(&timelocal);
+info = localtime(&timelocal);

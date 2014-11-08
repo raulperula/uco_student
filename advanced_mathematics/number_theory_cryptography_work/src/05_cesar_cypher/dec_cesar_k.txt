@@ -1,0 +1,6 @@
+Mensaje codificado = XPGWWMXAGXMYAWA
+Caracteres = 15
+
+Decodificacion usando clave k = 12
+Mensaje = MEULLAMOUMANOLO
+

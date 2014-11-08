@@ -1,0 +1,264 @@
+         CLIPS (Quicksilver Beta 12/31/07)
+CLIPS> (load "C:/Documents and Settings/Korso/Mis documentos/Universidad/IA/Resumenes CLIPS/Ejemplos CLIPS/t06ej04.clp")
+Defining defrule: ec-constante +j+j
+Defining deffacts: hechos
+TRUE
+CLIPS> (reset)
+CLIPS> (run)
+Regla activada
+CLIPS> (clear)
+CLIPS> (load "C:/Documents and Settings/Korso/Mis documentos/Universidad/IA/Resumenes CLIPS/Ejemplos CLIPS/t06ej05.clp")
+Defining defrule: ec-comodin +j+j
+Defining deffacts: hechos
+TRUE
+CLIPS> (reset)
+CLIPS> (run)
+Regla activada
+CLIPS> (clear)
+CLIPS> (load "C:/Documents and Settings/Korso/Mis documentos/Universidad/IA/Resumenes CLIPS/Ejemplos CLIPS/t06ej05.clp")
+Defining defrule: ec-comodin +j+j
+Defining deffacts: hechos
+TRUE
+CLIPS> (reset)
+CLIPS> (run)
+Regla activada
+Regla activada
+Regla activada
+CLIPS> (reset)
+CLIPS> 
+
+
+
+
+(reset)
+CLIPS> (clear)
+CLIPS> (load "C:/Documents and Settings/Korso/Mis documentos/Universidad/IA/Resumenes CLIPS/Ejemplos CLIPS/t06ej06.clp")
+Defining defrule: doble-activaci 
+[PRNTUTIL2] Syntax Error:  Check appropriate syntax for defrule.
+
+ERROR:
+(defrule MAIN::doble-activaci
+   <<<unprintable character>>>
+Defining deffacts: hechos-iniciales
+FALSE
+CLIPS> (clear)
+CLIPS> (load "C:/Documents and Settings/Korso/Mis documentos/Universidad/IA/Resumenes CLIPS/Ejemplos CLIPS/t06ej06.clp")
+Defining defrule: doble-activacion +j+j
+Defining deffacts: hechos-iniciales
+TRUE
+CLIPS> (reset)
+CLIPS> (run)
+Regla activada
+Regla activada
+CLIPS> (clear)
+CLIPS> (load "C:/Documents and Settings/Korso/Mis documentos/Universidad/IA/Resumenes CLIPS/Ejemplos CLIPS/t06ej07.clp")
+Defining deftemplate: persona
+Defining defrule: uso-de-variables +j+j
+Defining deffacts: lista-personas
+TRUE
+CLIPS> (reset)
+CLIPS> (run)
+Nombre completo: Maria (Valverde Espinosa)Nombre completo: Juan (Perez Gutierrez)Nombre completo: Manuel (Pedrero Luque)CLIPS> (clear
+)
+CLIPS> (clear)
+CLIPS> (load "C:/Documents and Settings/Korso/Mis documentos/Universidad/IA/Resumenes CLIPS/Ejemplos CLIPS/t06ej07.clp")
+Defining deftemplate: persona
+Defining defrule: uso-de-variables +j+j
+Defining deffacts: lista-personas
+TRUE
+CLIPS> (reset)
+CLIPS> (run)
+Nombre completo: Maria (Valverde Espinosa)
+Nombre completo: Juan (Perez Gutierrez)
+Nombre completo: Manuel (Pedrero Luque)
+CLIPS>       (clear)
+CLIPS> (load "C:/Documents and Settings/Korso/Mis documentos/Universidad/IA/Resumenes CLIPS/Ejemplos CLIPS/t06ej08.clp")
+Defining defrule: OR 
+[PRNTUTIL2] Syntax Error:  Check appropriate syntax for the first field of a pattern.
+
+ERROR:
+(defrule MAIN::OR
+   (dato1 |
+Defining defrule: AND 
+[PRNTUTIL2] Syntax Error:  Check appropriate syntax for the first field of a pattern.
+
+ERROR:
+(defrule MAIN::AND
+   (dato1 &
+Defining defrule: NOT1 
+[PRNTUTIL2] Syntax Error:  Check appropriate syntax for the first field of a pattern.
+
+ERROR:
+(defrule MAIN::NOT1
+   (~
+Defining defrule: NOT2 
+[PRNTUTIL2] Syntax Error:  Check appropriate syntax for the first field of a pattern.
+
+ERROR:
+(defrule MAIN::NOT2
+   (~
+Defining defrule: excepcion 
+[PRNTUTIL2] Syntax Error:  Check appropriate syntax for the first field of a pattern.
+
+ERROR:
+(defrule MAIN::excepcion
+   (?x
+Defining deffacts: hechos-excepcion
+FALSE
+CLIPS> (load "C:/Documents and Settings/Korso/Mis documentos/Universidad/IA/Resumenes CLIPS/Ejemplos CLIPS/t06ej08.clp")
+Defining defrule: OR 
+[PRNTUTIL2] Syntax Error:  Check appropriate syntax for the first field of a pattern.
+
+ERROR:
+(defrule MAIN::OR
+   ((
+Defining defrule: AND 
+[PRNTUTIL2] Syntax Error:  Check appropriate syntax for the first field of a pattern.
+
+ERROR:
+(defrule MAIN::AND
+   ((
+Defining defrule: NOT1 
+[PRNTUTIL2] Syntax Error:  Check appropriate syntax for the first field of a pattern.
+
+ERROR:
+(defrule MAIN::NOT1
+   (~
+Defining defrule: NOT2 
+[PRNTUTIL2] Syntax Error:  Check appropriate syntax for the first field of a pattern.
+
+ERROR:
+(defrule MAIN::NOT2
+   (~
+Defining defrule: excepcion 
+[PRNTUTIL2] Syntax Error:  Check appropriate syntax for the first field of a pattern.
+
+ERROR:
+(defrule MAIN::excepcion
+   (?x
+
+[CSTRCPSR1] WARNING: Redefining deffacts: hechos-excepcion
+FALSE
+CLIPS> (load "C:/Documents and Settings/Korso/Mis documentos/Universidad/IA/Resumenes CLIPS/Ejemplos CLIPS/t06ej08.clp")
+
+[CSTRCPSR1] WARNING: Redefining deffacts: hechos-excepcion
+Defining defrule: OR 
+[PRNTUTIL2] Syntax Error:  Check appropriate syntax for the first field of a pattern.
+
+ERROR:
+(defrule MAIN::OR
+   ((
+Defining defrule: AND 
+[PRNTUTIL2] Syntax Error:  Check appropriate syntax for the first field of a pattern.
+
+ERROR:
+(defrule MAIN::AND
+   ((
+Defining defrule: NOT1 
+[PRNTUTIL2] Syntax Error:  Check appropriate syntax for the first field of a pattern.
+
+ERROR:
+(defrule MAIN::NOT1
+   (~
+Defining defrule: NOT2 
+[PRNTUTIL2] Syntax Error:  Check appropriate syntax for the first field of a pattern.
+
+ERROR:
+(defrule MAIN::NOT2
+   (~
+Defining defrule: excepcion 
+[PRNTUTIL2] Syntax Error:  Check appropriate syntax for the first field of a pattern.
+
+ERROR:
+(defrule MAIN::excepcion
+   (?x
+FALSE
+CLIPS> (clear)
+CLIPS> (load "C:/Documents and Settings/Korso/Mis documentos/Universidad/IA/Resumenes CLIPS/Ejemplos CLIPS/t06ej08.clp")
+Defining deffacts: hechos-excepcion
+Defining defrule: OR 
+[PRNTUTIL2] Syntax Error:  Check appropriate syntax for the first field of a pattern.
+
+ERROR:
+(defrule MAIN::OR
+   ((
+Defining defrule: AND 
+[PRNTUTIL2] Syntax Error:  Check appropriate syntax for the first field of a pattern.
+
+ERROR:
+(defrule MAIN::AND
+   ((
+Defining defrule: NOT1 
+[PRNTUTIL2] Syntax Error:  Check appropriate syntax for the first field of a pattern.
+
+ERROR:
+(defrule MAIN::NOT1
+   (~
+Defining defrule: NOT2 
+[PRNTUTIL2] Syntax Error:  Check appropriate syntax for the first field of a pattern.
+
+ERROR:
+(defrule MAIN::NOT2
+   (~
+Defining defrule: excepcion 
+[PRNTUTIL2] Syntax Error:  Check appropriate syntax for the first field of a pattern.
+
+ERROR:
+(defrule MAIN::excepcion
+   (?x
+FALSE
+CLIPS> (clear)
+CLIPS> (load "C:/Documents and Settings/Korso/Mis documentos/Universidad/IA/Resumenes CLIPS/Ejemplos CLIPS/t06ej08.clp")
+Defining deffacts: hechos-excepcion
+Defining defrule: OR 
+[PRNTUTIL2] Syntax Error:  Check appropriate syntax for the first field of a pattern.
+
+ERROR:
+(defrule MAIN::OR
+   ((
+FALSE
+CLIPS> (clear)
+CLIPS> (load "C:/Documents and Settings/Korso/Mis documentos/Universidad/IA/Resumenes CLIPS/Ejemplos CLIPS/t06ej08.clp")
+Defining deffacts: hechos-excepcion
+Defining defrule: OR 
+[PRNTUTIL2] Syntax Error:  Check appropriate syntax for defrule.
+
+ERROR:
+(defrule MAIN::OR
+   (dato1)
+   |
+FALSE
+CLIPS> (load "C:/Documents and Settings/Korso/Mis documentos/Universidad/IA/Resumenes CLIPS/Ejemplos CLIPS/t06ej08.clp")
+
+[CSTRCPSR1] WARNING: Redefining deffacts: hechos-excepcion
+Defining defrule: OR 
+[PRNTUTIL2] Syntax Error:  Check appropriate syntax for defrule.
+
+ERROR:
+(defrule MAIN::OR
+   (hecho (
+FALSE
+CLIPS> (clear)
+CLIPS> (load "C:/Documents and Settings/Korso/Mis documentos/Universidad/IA/Resumenes CLIPS/Ejemplos CLIPS/t06ej08.clp")
+Defining deffacts: hechos-excepcion
+Defining defrule: OR 
+[PRNTUTIL2] Syntax Error:  Check appropriate syntax for defrule.
+
+ERROR:
+(defrule MAIN::OR
+   (hecho (
+FALSE
+CLIPS> (clear)
+CLIPS> (reset)
+CLIPS> (reset)
+CLIPS> (reset)
+CLIPS> (reset)
+CLIPS> (reset)
+CLIPS> (run)
+CLIPS> (run 1)
+CLIPS> (run 1)
+CLIPS> (run 1)
+CLIPS> (run)
+CLIPS> (reset)
+CLIPS> (run 1)
+CLIPS> 

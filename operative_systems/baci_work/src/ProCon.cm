@@ -1,0 +1,100 @@
+
+const int N = 10;			/* Dimension del bufer */
+const int ITER = 100;	/* Numero de iteraciones */
+const int P = 3;			/* Numero de productores */
+const int C = 3;			/* Numero de consumidores */
+int suma_P = 0;				/* Suma total de elemento producidos */
+int suma_C = 0;				/* Suma total de elemento consumidos */
+
+monitor ProductorConsumidor{
+	condition full, empty;	/* Variables de condicion */
+	int count = 0, ind_p = 0, ind_c = 0;	/* Contador e indices del bufer */
+	int bufer[N];
+
+	void Entrar(int dato)
+	{
+		if(count == N){
+			waitc(full);
+		}
+		
+		/* Introducir el dato en el bufer e incrementar el indice */
+		bufer[ind_p%N] = dato;
+		ind_p = (ind_p+1)%N;
+	
+		count++;
+		if(count == 1){
+			signalc(empty);
+		}
+	}
+
+	void Tomar(int &dato)
+	{
+		if(count == 0){
+			waitc(empty);
+		}
+	
+		/* Tomar el dato del bufer e incrementar el indice */
+		dato = bufer[ind_c];
+		ind_c = (ind_c+1)%N;
+	
+		count--;
+		if(count == N-1){
+			signalc(full);
+		}
+	}
+}
+
+void Productor(int id)
+{
+	int i, suma = 0, dato;
+	
+	for(i=0;i<ITER;i++){
+		/* Producir dato */
+		dato = random(1000);
+		suma = suma+dato;
+		
+		/* Introducir dato en bufer */
+		Entrar(dato);
+	}
+	
+	cout << "\nElementos producidos por " << id << ": " << suma << endl;
+	
+	suma_P = suma_P+suma;
+}
+
+void Consumidor(int id)
+{
+	int i, suma = 0, dato;
+	
+	for(i=0;i<ITER;i++){
+		/* Tomar dato del bufer */
+		Tomar(dato);
+		
+		/* Consumir dato */
+		suma = suma+dato;
+	}
+	
+	cout << "\nElementos consumidos por " << id << ": " << suma << endl;
+	
+	suma_C = suma_C+suma;
+}
+
+int
+main()
+{
+	int i;
+	
+	/* Ejecucion de los procesos Productor y Consumidor */
+	cobegin{
+		for(i=1;i<=P;i++){
+			Productor(i);
+		}
+		for(i=1;i<=C;i++){
+			Consumidor(i);
+		}
+	}
+	
+	cout << "\nTotal producido: " << suma_P << endl;
+	cout << "Total consumido: " << suma_C << endl;
+}
+

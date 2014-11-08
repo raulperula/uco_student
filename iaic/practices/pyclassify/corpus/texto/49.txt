@@ -1,0 +1,22 @@
+TITULO: Los fabricantes de coches plantean el uso de Internet permanente en el navegador
+
+La integracion de Internet permanente en los sistemas de navegacion es 
+uno de los objetivos planteados por los fabricantes de coches. De este 
+modo, los usuarios podran obtener datos de interes, asi como informar en 
+caso de emergencia.
+
+Segun informa Consumer.es, en 2016 mas de 60 millones de consumidores 
+tendran acceso a Internet en sus vehiculos, ya sea mediante sistemas y 
+dispositivos de terceros o bien integrado de fabrica. En la actualidad, 
+hay diferentes opciones para conectar un vehiculo a Internet. La mas 
+habitual es a traves de un smartphone que, junto con un navegador GPS, 
+permiten tener acceso en tiempo real a diferentes informaciones acerca 
+de las posibles rutas.
+
+Sin embargo, estos sistemas tienen el inconveniente de no estar 
+integrados por completo en el vehiculo y, por tanto, se necesita que el 
+conductor fije la vista en ellos durante breves segundos, una practica 
+prohibida por el nuevo reglamento de trafico. Esto abre el debate acerca 
+de la posible informacion que tomen las aseguradoras sobre el 
+comportamiento en carretera de sus clientes.
+

@@ -1,0 +1,16 @@
+TITULO: Virtual 3D City: un serio competidor para Google Earth en iPhone e iPad
+
+La empresa francesa Newscape Technology ha disenado una aplicacion, 
+hasta ahora disponible para iPhone e iPad, que permite la visualizacion 
+de una ciudad en tres dimensiones en terminales moviles. Algunas webs 
+especializadas en tecnologias ya ven en Virtual 3D City un digno 
+competidor de Google Earth, como podemos leer en Microsiervos.
+
+Pensada como guia turistica interactiva esta disponible, por ejemplo, 
+para la ciudad de Paris, permitiendo a quien la use visitar cualquier 
+rincon de la capital francesa y todos sus edificios desde cualquier 
+perspectiva, como destacan en Portaltic.
+
+Los desarrolladores han anunciado que pronto estara disponible tambien 
+para Google Android, Windows Mobile y Symbian S60. Su preio actual ronda 
+los 3 dolares.

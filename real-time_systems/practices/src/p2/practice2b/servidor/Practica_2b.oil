@@ -1,0 +1,125 @@
+#include "implementation.oil"
+
+CPU ATMEL_AT91SAM7S256
+{
+	OS LEJOS_OSEK
+  	{
+    	STATUS = EXTENDED;
+    	STARTUPHOOK = FALSE;
+    	ERRORHOOK = FALSE;
+    	SHUTDOWNHOOK = FALSE;
+    	PRETASKHOOK = FALSE;
+    	POSTTASKHOOK = FALSE;
+    	USEGETSERVICEID = FALSE;
+    	USEPARAMETERACCESS = FALSE;
+    	USERESSCHEDULER = FALSE;
+  	};
+
+	APPMODE sample_appmode1{};
+	
+	TASK LeerPulsadores
+	{
+		AUTOSTART 	= FALSE;
+		PRIORITY 	= 10;
+		ACTIVATION 	= 1;
+		SCHEDULE 	= FULL;
+		STACKSIZE 	= 512;
+	};
+	
+	TASK LeerSonar
+	{
+		AUTOSTART 	= FALSE;
+		PRIORITY 	= 9;
+		ACTIVATION 	= 1;
+		SCHEDULE 	= FULL;
+		STACKSIZE 	= 512;
+	};
+
+	TASK Comparar
+	{
+		AUTOSTART 	= FALSE;
+		PRIORITY 	= 6;
+		ACTIVATION 	= 1;
+		SCHEDULE 	= FULL;
+		STACKSIZE 	= 512;
+	};
+	
+	TASK Mirar
+	{
+		AUTOSTART 	= FALSE;
+		PRIORITY 	= 7;
+		ACTIVATION 	= 1;
+		SCHEDULE 	= NON;
+		STACKSIZE 	= 512;
+	};
+	
+	TASK Avanzar
+	{
+		AUTOSTART 	= FALSE;
+		PRIORITY 	= 5;
+		ACTIVATION 	= 1;
+		SCHEDULE 	= FULL;
+		STACKSIZE 	= 512;
+	};
+	
+	TASK PantallaLCD
+	{
+		AUTOSTART = FALSE;
+		PRIORITY = 15;
+		ACTIVATION = 1;
+		SCHEDULE = FULL;
+		STACKSIZE = 512;
+	};
+  
+	COUNTER SysTimerCnt
+	{
+		MINCYCLE = 1;
+		MAXALLOWEDVALUE = 10000;
+		TICKSPERBASE = 1; /* One tick is equal to 1msec */
+	};
+   
+	ALARM AlarmaLCD
+	{
+		COUNTER = SysTimerCnt;
+		ACTION = ACTIVATETASK
+		{
+			TASK = PantallaLCD;
+		};
+		AUTOSTART = TRUE
+		{
+			ALARMTIME = 10;
+			CYCLETIME = 100; /* executed every 500msec */
+			APPMODE = sample_appmode1;
+		};
+	};
+   
+	ALARM AlarmaSonar
+	{
+		COUNTER = SysTimerCnt;
+		ACTION = ACTIVATETASK
+		{
+			TASK = LeerSonar;
+		};
+		AUTOSTART = TRUE
+		{
+			ALARMTIME = 1;
+			CYCLETIME = 100;
+			APPMODE = sample_appmode1;
+		};
+	};
+	
+	ALARM AlarmaPulsador
+	{
+		COUNTER = SysTimerCnt;
+		ACTION = ACTIVATETASK
+		{
+			TASK = LeerPulsadores;
+		};
+		AUTOSTART = TRUE
+		{
+			ALARMTIME = 1;
+			CYCLETIME = 50;
+			APPMODE = sample_appmode1;
+		};
+	};
+};

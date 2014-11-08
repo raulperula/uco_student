@@ -1,0 +1,24 @@
+Introducción
+
+Avanzando al siguiente nivel de comunicación entre procesos llegamos a los sockets.
+Python evidentemente tiene un interfaz a su estilo y orientado a objetos para este importante mecanismo de comunicación.
+
+La interfaz con sockets en lenguaje Python la proporciona el módulo socket 
+(visitar http://docs.python.org/lib/module-socket.html para consultar el manual de dicho módulo).
+
+La función socket() devuelve un objeto de tipo socket cuyos métodos realizan las
+llamadas al sistema necesarias de forma más sencilla y con parámetros de más alto
+nivel que en lenguaje C, dado que la reserva de memoria para los datos recibidos
+y su tamaño son implícitos en Python.
+
+Las funciones, parámetros, etc. son análogas a las ya vistas en Lenguaje C.
+
+También puede ayudar: Socket Programming HOWTO.(http://www.amk.ca/python/howto/sockets/)
+
+Ejercicio
+
+Modificar el servidor de multiplicación para que pueda ser ejecutado de manera concurrente,
+con control de errores y que se "desconecte" al enviarle dos ceros, una vez desconectado debe decir cuantas operaciones ha realizado.
+
+Realizar la misma versión del programa que hemos hecho en C en clases de teoría pero aquí en el lenguaje Python.
+
